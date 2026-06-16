@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     button.setImageResource(R.drawable.mouse_open)
+                    counter++
+                    textView.text = "Clicks: $counter"
                     mediaPlayer?.start()
                 }
                 MotionEvent.ACTION_UP -> {
